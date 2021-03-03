@@ -11,8 +11,10 @@ results = soup.find_all(class_=HTML_FILTER)
 work_data = []
 
 for html in results:
-    titel = html.find(TITLE_TAG)
+    titel = html.find(TITLE_TAG).text
     work_data.append(Treffer(titel, html))
     
 
-print(len(work_data))
+for i in work_data:
+    print(i.titel)
+    print(i.trend())
