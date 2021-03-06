@@ -1,2 +1,4 @@
 database_dev.db
 __pycache__
+.vscode
+env
